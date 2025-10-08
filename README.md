@@ -186,4 +186,4 @@ python -m signlang.export_onnx --checkpoint outputs/run1/best.ckpt --output sign
 See [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) for a deep dive on the model, loss functions, metrics, and configuration hooks. The head layers in `signlang/model.py` are modular and heavily commented to guide customizations (e.g., widening deconvolution filters, stacking additional upsample blocks, or swapping in a transformer backbone).
 
 ## License
-Released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE), a permissive open-source license originating from the Massachusetts Institute of Technology (MIT) that allows reuse, modification, and distribution with minimal restrictions while retaining copyright notices.
