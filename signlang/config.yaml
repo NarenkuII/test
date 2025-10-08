@@ -1,0 +1,44 @@
+paths:
+  data_root: dataset
+  images_dir: images
+  labels_dir: labels
+  output_dir: outputs/default
+  tensorboard_dir: runs
+training:
+  seed: 42
+  img_size: 512
+  heatmap_size: 128
+  sigma: 2.0
+  batch_size: 16
+  epochs: 50
+  num_workers: 8
+  mixed_precision: false
+  gradient_accumulation_steps: 1
+model:
+  backbone: resnet18
+  head: deconv_upsample
+  pretrained: false
+loss:
+  name: mse
+  focal_gamma: 2.0
+optimizer:
+  name: adam
+  lr: 0.0003
+  weight_decay: 0.0
+  betas: [0.9, 0.999]
+scheduler:
+  name: none
+  params: {}
+augmentations:
+  enabled: true
+  horizontal_flip: true
+  rotation: true
+  scale: true
+  color_jitter: true
+  blur: false
+  noise: false
+logging:
+  log_interval: 10
+  val_interval: 1
+  save_top_k: 1
+  ema_decay: 0.0
